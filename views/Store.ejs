@@ -1,0 +1,84 @@
+<!--The three recipes and a little description-->
+<!--exports.Store = async(req, res) =>{res.render('Store', {title: 'Store'});}-->
+
+<!--intropage-->
+<div class="col-12 col-lg-6">
+    <h1 class="display-5 fw-bold mb-3">Welcome to CUR[RY] Store</h1>
+    <p class="sans" > 
+        Please use our services to help fund more recipes as well as make surprise dinners for your family, friends, or love.
+    </p>
+</div>
+
+<!--three recipes and little description-->
+<!--salmon-->
+<div class="row row-cols-2 row-cols-lg-6  g-2 g-lg-3 py-4">
+    <a class="col text-center category__pic">
+        <div class="category__img shadow">
+            <img src="img/salmon.jpg" alt="salmon" loading="lazy">
+        </div>
+        <div class="pt-1">Garlic Butter Salmon $15 <br> Delicious delicate salmon for the whole family.</div>
+    </a>
+<!--tofu-->
+    <a class="col text-center category__pic">
+        <div class="category__img shadow">
+            <img src="img/tofu.jpg" alt="tofu" loading="lazy">
+        </div>
+        <div class="pt-1">Pan-Fried Sesame Garlic Tofu $8 <br> Great for vegetarian as well as tofu lovers.</div>
+    </a>
+<!--tempura-->
+    <a class="col text-center category__pic">
+        <div class="category__img shadow">
+            <img src="img/tempura.jpg" alt="tempura" loading="lazy">
+        </div>
+        <div class="pt-1">Tempura $10 <br> Who does not love crunchy meat and vegetable?</div>
+    </a>
+</div>
+
+<!--insert information for check-out-->
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <form action="/submit-comment" enctype="multipart/form-data" method="POST">
+                <div class="row g-3">
+                    <div class="col-5">
+                        <!--first name-->
+                        <label for="fname" class="form-label">First Name</label>
+                        <input type="name" name="name" id="name" placeholder="First name" class="form-control">
+                    </div>
+                    <div class="col-5">
+                        <!--last name-->
+                        <label for="lname" class="form-label">Last Name</label>
+                        <input type="lname" name="lname" id="lname" placeholder="Last name" class="form-control">
+                    </div>
+                    <div class="col-5">
+                        <!--credit card number-->
+                        <label for="creditnum" class="form-label">Credit Card</label>
+                        <input type="creditnum" name="creditnum" id="creditnum" placeholder="Credit Card number" class="form-control">
+                    </div>
+                    <div class="col-5">
+                        <!--credit card expiration date-->
+                        <label for="creditexpir" class="form-label">Credit Card Expiration Date</label>
+                        <input type="creditexp" name="creditexp" id="creditexp" placeholder="Credit Card Expiration Date" class="form-control">
+                    </div>
+                    <div class="col-5">
+                        <!--credit card ccv number-->
+                        <label for="CCV" class="form-label">Credit Card CCV Number </label>
+                        <input type="CCV" name="CCV" id="CCV" placeholder="Enter your CCV here" class="form-control">
+                    </div>
+                   
+                    <!--https://www.jquery-az.com/how-to-create-and-style-html-checkbox-with-pure-css-and-a-plug-in/-->
+                    <!--check the boxes to purchase the recipes-->
+                    <div class="divcls"><p>What would you like to buy? Check below</p>
+                        <input type="checkbox" name="chksalmon"/> Garlic Butter Salmon $15 <br>
+                        <input type="checkbox" name="chktofu"/> Pan-Fried Sesame Garlic Tofu $15<br>
+                        <input type="checkbox" name="chktempura"/> Tempura $10
+                        </div>
+
+                    <!--the boxes to purchase or to verify credit card-->
+                    <!--https://www.w3schools.com/tags/tag_button.asp-->
+                    <div class="col-12">
+                        <button type="button" class="btn btn-outline-primary" id="purchase">Purchase</button>
+                        <button type="button" class="btn btn-outline-primary" id="checkcredit">Verify Credit card here</button>
+                    </div>
+
+
+                </div>

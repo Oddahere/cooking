@@ -1,0 +1,57 @@
+<!--header of the community page-->
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Comments and request here</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead">If you have any comments, feel free to leave them down below. If you also find amazing recipes, send a comment!</p>
+    </div>
+</div>
+
+<!-- 5 hard coded users comments as a community page-->
+<div class="text-left">
+    <h1 class="fw-bold lead">Jessica</h1>
+    <p class="lead">I really enjoy the garlic butter salmon recipe!</p>
+</div>
+<div class="text-left">
+    <h1 class="fw-bold lead">Adam</h1>
+    <p class="lead">The pan-fried sesame garlic tofu is perfect for me since I am a vegetarian!</p>
+</div>
+<div class="text-left">
+    <h1 class="fw-bold lead">Mark</h1>
+    <p class="lead">For the garlic butter salmon, it tastes better with a little bit of salt!</p>
+</div>
+<div class="text-left">
+    <h1 class="fw-bold lead">Lucy</h1>
+    <p class="lead">I hope to add more recipes in the future. My husband love using your recipes for dinner.</p>
+</div>
+<div class="text-left">
+    <h1 class="fw-bold lead">Karen</h1>
+    <p class="lead">This website could add more recipes. I need a bigger variety of recipes in the future.</p>
+</div>
+
+<!--form submission-->
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form action="/submit-comment" enctype="multipart/form-data" method="POST">
+            <div class="row g-3">
+                <div class="col-12">
+<!--name here-->
+                    <label for="name" class="form-label">Name</label>
+                    <input type="name" name="name" id="name" placeholder="Name here" class="form-control">
+                </div>
+                <div class="col-12">
+<!--comment here-->
+                    <label for="comment" class="form-label">Comment</label>
+                    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Put your comments here" class="form-control"></textarea>
+                </div>
+                <div class="col-12">
+<!--button click-->
+                    <button type="button" class="btn btn-outline-primary" id="addComment">+ Comment</button>
+                </div>
+            </div>
+
+
+
+
+        </form>
+    </div>
+</div>
